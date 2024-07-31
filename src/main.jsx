@@ -9,6 +9,7 @@ import { PageNotFound } from './pages/PageNotFound/PageNotFound'
 import { Users } from './pages/Users/Users'
 import { Profile } from './pages/Profile/Profile'
 import { SearchMovie } from './components/SearchMovie/SearchMovie'
+import MovieProfile from './components/SearchMovie/MovieProfile/MovieProfile'
 //import { AuthProvider } from 'contexs/AuthContext'
 
 const router = createBrowserRouter([
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "search-movie",
         element: <SearchMovie />,
+      },
+      {
+        path: "/movie/:id",
+        element: <MovieProfile />
       }
     ]
   },
