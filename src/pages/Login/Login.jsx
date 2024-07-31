@@ -18,9 +18,17 @@ export const Login = () => {
         body: JSON.stringify({ email, password}),
       })
       const data = await response.json()
+
       if(data.token){
+        
+        //const {access, refresh} = data.token
+
+        //localStorage.setItem("accessToken", JSON.stringify(access))
+        //localStorage.setItem("refreshToken", JSON.stringify(refresh))
+        localStorage.setItem("AuthToken", JSON.stringify(JSON.stringify(data)))
+
         login(data.token)
-        navigate("/home")
+        navigate("/search-movie")
       }
     } catch (error) {
       console.error('Login Failed', error)
