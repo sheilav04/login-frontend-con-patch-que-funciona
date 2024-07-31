@@ -16,6 +16,9 @@ function App() {
       <NavLink to="login">
         <button className='my-button'>Go to Login</button>
       </NavLink>
+      <NavLink to="search-movie">
+        <button className='my-button'>Go to Search a Movie</button>
+      </NavLink>
     </>
   )
 }
