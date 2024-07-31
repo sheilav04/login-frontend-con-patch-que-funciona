@@ -26,5 +26,5 @@ export const useFetch = (url) => {
         fecthData()
     }, [url])
 
-    return {data, load, error}
+    return {data, load, error, setLoading}
 }
